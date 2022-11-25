@@ -1,0 +1,17 @@
+{
+  "name": "advanced_routing_express",
+  "version": "1.0.0",
+  "description": "routing using Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express/Routing"
+  ],
+  "author": "Traven Wells",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
