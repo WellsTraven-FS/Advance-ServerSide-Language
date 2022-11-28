@@ -24,4 +24,4 @@ const erase = (req, res) => {
     res.json(products);
 };
 
-module.exports = { index, form, show, create, update, erase };
+module.exports = { index, show, create, update, erase };
