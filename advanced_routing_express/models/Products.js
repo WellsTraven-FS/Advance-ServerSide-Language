@@ -1,7 +1,7 @@
 let products = [
-    { id: "1", bike: "Mongoose", color: "Red" },
-    { id: "2", bike: "Hefty", color: "Blue" },
-    { id: "3", bike: "BMX", color: "Purple" },
+    { id: "1", bike: "Mongoose", color: "Red", price: 250.99 },
+    { id: "2", bike: "Hefty", color: "Blue", price: 100.99 },
+    { id: "3", bike: "BMX", color: "Purple", price: 500.99 },
 ];
 
 const all = () => {
