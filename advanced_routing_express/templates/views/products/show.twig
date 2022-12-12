@@ -1,13 +1,13 @@
 {% extends 'layouts/base.twig' %}
 
 {% block main_content %}
-    <h2> About {{ product.bike }} </h2>
+    <h2> About {{ product.title }} </h2>
     <ul>
         <li style="list-style: none;" >
             <label>Id: </label> {{ product.id }}
         </li>
         <li style="list-style: none;" >
-            <label>Bike: </label> {{ product.bike }}
+            <label>Bike: </label> {{ product.title }}
         </li>
         <li style="list-style: none;" >
             <label>Price: </label> {{ product.price }}
