@@ -5,10 +5,11 @@
     <ul>
         {% for product in products %}
             <nav>
-                {{product.bike}} {{"Price:"}}{{product.price}} - 
+                {{product.title}} {{"Price:"}}{{product.price}} - 
                 <a href="/products/{{ product.id }}">Edit</a>
                 <a href="/products/{{ product.id }}/delete">Delete</a>
             </nav>
         {% endfor %}
     </ul>
+    <a href="products/new">Create New Product</a>
 {% endblock %}
