@@ -4,7 +4,7 @@
     {% endif %}
     <div>
         <label for="title">Name:</label>
-        <input type="text" name="title" id="bike" value="{{ variant.title }}" />
+        <input type="text" name="title" id="title" value="{{ variant.title }}" />
     </div>
     <div>
         <label>Product</label>
@@ -23,6 +23,14 @@
     <div>
         <label for="price">Price:</label>
         <input type="text" name="price" id="price" value="{{ variant.price }}"/>
+    </div>
+    <div>
+        <label for="description">Description:</label>
+        <input type="text" name="description" id="description" value="{{ variant.description }}"/>
+    </div>
+    <div>
+        <label for="iventory">Iventory:</label>
+        <input type="text" name="inventory" id="inventory" value="{{ variant.inventory }}"/>
     </div>
     <div>
         <input type="submit" type="submit"" />
