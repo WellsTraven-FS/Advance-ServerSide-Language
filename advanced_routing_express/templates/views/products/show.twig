@@ -12,6 +12,12 @@
         <li style="list-style: none;" >
             <label>Price: </label> {{ product.price }}
         </li>
+        <li style="list-style: none;" >
+            <label>Description: </label> {{ product.description }}
+        </li>
+        <li style="list-style: none;" >
+            <label>Status: </label> {{ product.is_published }}
+        </li>
     </ul>
     <p>
         <a href="/products/{{ product.id }}/edit">Edit</a> | <a href="/products/{{ product.id }}/delete">Delete</a>
