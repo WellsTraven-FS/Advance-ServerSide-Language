@@ -2,13 +2,13 @@ const { Product } = require("../models");
 
 const index = async (req, res) => {
     const products = await Product.findAll();
-    // res.render("views/products/index", { products });
-    res.json(products);
+    res.render("views/products/index", { products });
+    // res.json(products);
 };
-const form = (req, res) => {
+const form = async (req, res) => {
     // res.send("Products.form");
     if (req.params.id) {
-        const product = Product.find(req.params.id);
+        const product = await Product.findByPk(req.params.id);
         res.render("views/products/edit", { product });
     } else {
         res.render("views/products/create");

@@ -5,13 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    {% block stylesheets %}
+		<link rel="stylesheet" type="text/css" href="/public/app.css">
+	{% endblock %}
 </head>
 <body>
-    <h1>Welcome To My world</h1>
+    {% include '../partials/_header.twig' %}
+
+    
     {% block main_content %}
     {% endblock %}
     
    
     {% include '../partials/_footer.twig' %}
+    
+    {% block scripts %}
+		<script type="text/javascript" src="/public/app.js"></script>
+	{% endblock %}
 </body>
 </html>

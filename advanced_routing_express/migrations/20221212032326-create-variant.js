@@ -1,6 +1,6 @@
 "use strict";
 
-const { SequelizeMethod } = require("sequelize/types/utils");
+// const { SequelizeMethod } = require("sequelize/types/utils");
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -15,8 +15,19 @@ module.exports = {
             title: {
                 type: Sequelize.STRING,
             },
+            slug: {
+                type: Sequelize.STRING,
+            },
+            description: {
+                type: Sequelize.TEXT,
+            },
             price: {
                 type: Sequelize.FLOAT,
+            },
+            inventory: {
+                type: Sequelize.INTEGER,
+                allowNull: true,
+                defaultValue: 0,
             },
             productId: {
                 type: Sequelize.INTEGER,

@@ -9,7 +9,7 @@ const form = async (req, res) => {
     // res.send("Products.form");
     const products = await Product.findAll();
     if (req.params.id) {
-        const variant = Variant.find(req.params.id);
+        const variant = await Variant.findByPk(req.params.id);
         res.render("views/variants/edit", { variant, products });
     } else {
         res.render("views/variants/create", { products });

@@ -9,7 +9,7 @@ const form = async (req, res) => {
     // res.send("images.form");
     const variants = await Variant.findAll();
     if (req.params.id) {
-        const image = Image.find(req.params.id);
+        const image = await Image.findByPk(req.params.id);
         res.render("views/images/edit", { image, variants });
     } else {
         res.render("views/images/create", { variants });
@@ -23,6 +23,9 @@ const show = async (req, res) => {
 };
 const create = async (req, res) => {
     const image = await Image.create(req.body);
+    req.imageId = image.id;
+    // Invoke our upload middleware with next()
+    next();
     res.redirect("/images/" + image.id);
     // res.json(image);
 };
@@ -30,6 +33,10 @@ const update = (req, res) => {
     const image = Image.update(req.body, {
         where: { id: req.params.id },
     });
+    // Sets a pretext "imageId" for our upload middleware
+    req.imageId = req.params.id;
+    // Invoke our upload middleware with next()
+    next();
     res.redirect("/images/" + req.params.id);
     // res.json(image);
 };

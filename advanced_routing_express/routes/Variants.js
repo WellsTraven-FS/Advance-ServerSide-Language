@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const variantController = require("../controllers/Products");
+const variantController = require("../controllers/Variants");
 
 router.get("/", variantController.index);
 router.get("/new", variantController.form);
