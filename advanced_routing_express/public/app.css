@@ -1,0 +1,25 @@
+body {
+    background-color: orange;
+}
+/* Header Navigation Styling */
+#navHome {
+    text-align: center;
+    padding-top: 20px;
+}
+#navHomeEdit {
+    background: gray;
+    padding: 5px;
+    margin-right: 10px;
+    border-style: solid;
+}
+
+/* All Product Styling */
+#bikesPage {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+#bikeDiv {
+    margin-top: 100px;
+}
